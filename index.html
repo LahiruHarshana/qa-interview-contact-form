@@ -6,7 +6,6 @@
     <title>Contact Us - QA Test</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* --- Basic Setup & Modern Styling --- */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
         :root {
@@ -27,7 +26,6 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* UPDATED: Subtle gradient background */
             background: linear-gradient(135deg, #f5f7fa 0%, #e1e8f0 100%);
             display: flex;
             justify-content: center;
@@ -36,7 +34,6 @@
             padding: 20px;
         }
 
-        /* --- Form Container Styling --- */
         .contact-container {
             background-color: white;
             padding: 40px;
@@ -54,7 +51,6 @@
             text-align: center;
             margin-bottom: 30px;
             font-weight: 600;
-            /* UPDATED: Gradient text effect */
             background: linear-gradient(45deg, var(--primary-color), var(--primary-color-dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -62,13 +58,11 @@
             text-fill-color: transparent;
         }
 
-        /* --- Form Elements Styling --- */
         .form-group {
             margin-bottom: 20px;
             position: relative;
         }
 
-        /* ADDED: Styling for icons inside input fields */
         .form-group .fa-solid {
             position: absolute;
             left: 18px;
@@ -87,7 +81,6 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            /* UPDATED: Padding adjusted for icons */
             padding: 12px 15px 12px 50px;
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -96,7 +89,6 @@
             transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        /* ADDED: Style icon color on focus */
         .form-group:focus-within .fa-solid {
             color: var(--primary-color);
         }
@@ -113,7 +105,6 @@
             min-height: 120px;
         }
 
-        /* --- Validation and Messaging Styling --- */
         .form-group input.error,
         .form-group textarea.error {
             border-color: var(--danger-color);
@@ -144,12 +135,9 @@
             background-color: #f8d7da;
             color: #721c24;
         }
-
-        /* --- Button and Loader Styling --- */
         .submit-btn {
             width: 100%;
             padding: 15px;
-            /* UPDATED: Gradient background for the button */
             background: linear-gradient(45deg, var(--primary-color), var(--primary-color-dark));
             background-size: 200%;
             color: white;
@@ -159,7 +147,6 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
-            /* ADDED: Flex properties for icon alignment */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -245,7 +232,6 @@
 </div>
 
 <script>
-    // The JavaScript remains exactly the same to preserve the bugs.
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('contactForm');
         const submitButton = document.getElementById('submitButton');
@@ -268,7 +254,6 @@
                     statusMessage.className = 'status-message success';
                     statusMessage.style.display = 'block';
 
-                    // BUG #3: The form fields are not cleared after a successful submission.
 
                 }, 2000);
             } else {
